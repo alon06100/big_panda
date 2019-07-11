@@ -1,0 +1,139 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+#app-container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+
+  .no-focus {
+    &:focus {
+      outline: none;
+    }
+}
+
+#user-details-container {
+  height: 150px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  #last-seen {
+    font-size: 0.8em;
+  }
+
+  #email {
+    font-size: 1em;
+  }
+
+  img {
+    width: 80px;
+    height: 80px;
+    border-radius: 3px;
+  }
+
+  #user-text-container {
+    display: flex;
+    flex-flow: column;
+    margin-left: 10px;
+    height: 80px;
+    justify-content: space-evenly;
+  }
+}
+  #comments-page-conatiner {
+    width: 540px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+  
+    #form-section {
+      padding: 20px;
+      background-color: #efefef;
+      border-radius: 3px 3px 0 0;
+      form {
+        display: flex;
+        flex-flow: column;
+        height: 150px;
+        justify-content: space-evenly;
+
+        button {
+          padding: 10px;
+          width: 80px;
+          background-color: #4baadb;
+          border-radius: 5px;
+          color: white;
+          font-weight: 700;
+          align-self: flex-end;
+          border: none;
+          outline: none !important;
+          cursor: pointer;
+        }
+  
+        input {
+          padding: 10px;
+          border: 1px solid #d3d3d3;
+        }
+        textarea {
+          resize: none;
+          padding: 10px;
+          border: 1px solid #d3d3d3;
+        }
+      }
+    }
+    #comments-section {
+      border: 1px solid #efefef;
+      padding: 20px;
+      display: flex;
+      flex-flow: column;
+      overflow-y: auto;
+      border-radius: 0 0 3px 3px;
+      flex-grow: 1;
+
+      #comments-wrapper {
+        overflow-y: auto;
+        margin-top: 20px;
+        .comment {
+          display: flex;
+          flex-flow: row nowrap;
+          height: 60px;
+          margin-top: 20px;
+          align-items: center;
+
+          &:nth-child(1) {
+            margin-top: 0;
+          }
+
+          .comment-text-wrapper {
+            flex-flow: column;
+            height: 50px;
+            display: flex;
+            justify-content: space-around;
+            margin-left: 10px;
+
+
+            .email-field {
+              font-weight: 700;
+            }
+            .message-field {
+              color: #948f8f;     
+            }
+          }
+
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: 3px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+  
+

@@ -1,0 +1,155 @@
+.search-input-group {
+  border: 1px solid #d3d3d3;
+  display: flex;
+  align-items: center; }
+  .search-input-group .search-input {
+    border: none;
+    padding: 10px;
+    width: 100%; }
+  .search-input-group i {
+    margin-left: 10px;
+    color: #d3d3d3; }
+.backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .2s ease;
+  background-color: #00000038; }
+  .backdrop.active {
+    visibility: visible;
+    opacity: 1; }
+  .backdrop.no-bg {
+    background-color: #ffffff00; }
+
+.modal-wrapper {
+  background-color: #fafafa;
+  overflow: auto;
+  position: fixed;
+  max-width: 80%;
+  min-height: 150px;
+  width: 300px;
+  top: 25%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 3%;
+  box-shadow: 0 5px 10px;
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .5s ease, visibility .5s ease; }
+  .modal-wrapper.active {
+    visibility: visible;
+    opacity: 1; }
+  .modal-wrapper .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    text-decoration: none;
+    transition: color .2s ease;
+    cursor: pointer; }
+html, body {
+  margin: 0;
+  padding: 0; }
+
+#app-container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center; }
+  #app-container .no-focus:focus {
+    outline: none; }
+  #app-container #user-details-container {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    #app-container #user-details-container #last-seen {
+      font-size: 0.8em; }
+    #app-container #user-details-container #email {
+      font-size: 1em; }
+    #app-container #user-details-container img {
+      width: 80px;
+      height: 80px;
+      border-radius: 3px; }
+    #app-container #user-details-container #user-text-container {
+      display: flex;
+      flex-flow: column;
+      margin-left: 10px;
+      height: 80px;
+      justify-content: space-evenly; }
+  #app-container #comments-page-conatiner {
+    width: 540px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    height: 95vh; }
+    #app-container #comments-page-conatiner #form-section {
+      padding: 20px;
+      background-color: #efefef;
+      border-radius: 3px 3px 0 0; }
+      #app-container #comments-page-conatiner #form-section form {
+        display: flex;
+        flex-flow: column;
+        height: 150px;
+        justify-content: space-evenly; }
+        #app-container #comments-page-conatiner #form-section form button {
+          padding: 10px;
+          width: 80px;
+          background-color: #4baadb;
+          border-radius: 5px;
+          color: white;
+          font-weight: 700;
+          align-self: flex-end;
+          border: none;
+          outline: none !important;
+          cursor: pointer; }
+        #app-container #comments-page-conatiner #form-section form input {
+          padding: 10px;
+          border: 1px solid #d3d3d3; }
+        #app-container #comments-page-conatiner #form-section form textarea {
+          resize: none;
+          padding: 10px;
+          border: 1px solid #d3d3d3; }
+    #app-container #comments-page-conatiner #comments-section {
+      border: 1px solid #efefef;
+      padding: 20px;
+      display: flex;
+      flex-flow: column;
+      overflow-y: auto;
+      border-radius: 0 0 3px 3px;
+      flex-grow: 1; }
+      #app-container #comments-page-conatiner #comments-section #comments-wrapper {
+        overflow-y: auto;
+        margin-top: 20px; }
+        #app-container #comments-page-conatiner #comments-section #comments-wrapper .comment {
+          display: flex;
+          flex-flow: row nowrap;
+          height: 60px;
+          margin-top: 20px;
+          align-items: center; }
+          #app-container #comments-page-conatiner #comments-section #comments-wrapper .comment:nth-child(1) {
+            margin-top: 0; }
+          #app-container #comments-page-conatiner #comments-section #comments-wrapper .comment .comment-text-wrapper {
+            flex-flow: column;
+            height: 50px;
+            display: flex;
+            justify-content: space-around;
+            margin-left: 10px; }
+            #app-container #comments-page-conatiner #comments-section #comments-wrapper .comment .comment-text-wrapper .email-field {
+              font-weight: 700; }
+            #app-container #comments-page-conatiner #comments-section #comments-wrapper .comment .comment-text-wrapper .message-field {
+              color: #948f8f; }
+          #app-container #comments-page-conatiner #comments-section #comments-wrapper .comment img {
+            width: 50px;
+            height: 50px;
+            border-radius: 3px;
+            cursor: pointer; }
+
+/*# sourceMappingURL=style.css.map*/
