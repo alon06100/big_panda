@@ -131,14 +131,15 @@ html, body {
         #app-container #comments-page-conatiner #comments-section #comments-wrapper .comment {
           display: flex;
           flex-flow: row nowrap;
-          height: 60px;
           margin-top: 20px;
-          align-items: center; }
+          align-items: center;
+          word-break: break-all; }
+          #app-container #comments-page-conatiner #comments-section #comments-wrapper .comment .avatar-wrapper {
+            align-self: flex-start; }
           #app-container #comments-page-conatiner #comments-section #comments-wrapper .comment:nth-child(1) {
             margin-top: 0; }
           #app-container #comments-page-conatiner #comments-section #comments-wrapper .comment .comment-text-wrapper {
             flex-flow: column;
-            height: 50px;
             display: flex;
             justify-content: space-around;
             margin-left: 10px; }
