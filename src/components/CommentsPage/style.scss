@@ -100,9 +100,13 @@ html, body {
         .comment {
           display: flex;
           flex-flow: row nowrap;
-          height: 60px;
           margin-top: 20px;
           align-items: center;
+          word-break: break-all;
+
+          .avatar-wrapper {
+            align-self: flex-start;
+          }
 
           &:nth-child(1) {
             margin-top: 0;
@@ -110,7 +114,6 @@ html, body {
 
           .comment-text-wrapper {
             flex-flow: column;
-            height: 50px;
             display: flex;
             justify-content: space-around;
             margin-left: 10px;

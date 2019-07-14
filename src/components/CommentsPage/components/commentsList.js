@@ -12,7 +12,7 @@ const CommentsList = ({ comments, toggleModal, setSelectedUser }) => {
       const { _id, email } = comment;
       return (
         <div key={_id} className="comment">
-          <div onClick={() => openModal(email)}><Gravatar email={email} /></div>
+          <div className="avatar-wrapper" onClick={() => openModal(email)}><Gravatar email={email} /></div>
           <div className="comment-text-wrapper">
             <div className="email-field">{comment.email}</div>
             <div className="message-field">{comment.message}</div>
